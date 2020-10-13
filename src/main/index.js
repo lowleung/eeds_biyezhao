@@ -173,9 +173,9 @@ function createWindow() {
         y: 0,
         frame: false,
         center: true,
-        alwaysOnTop: false,
-        fullscreen: false,
-        kiosk: false,
+        alwaysOnTop: true,
+        fullscreen: true,
+        kiosk: true,
         webPreferences: {
           webSecurity: false
         }

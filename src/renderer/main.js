@@ -13,6 +13,8 @@ import VueAwesomeSwiper from 'vue-awesome-swiper'
 import 'swiper/dist/css/swiper.css'
 import Viewer from 'v-viewer'
 import 'viewerjs/dist/viewer.css'
+import GeminiScrollbar from 'vue-gemini-scrollbar'
+Vue.use(GeminiScrollbar)
 Vue.use(ElementUI)
 Vue.use(VideoPlayer)
 Vue.use(VueAwesomeSwiper)
@@ -34,7 +36,6 @@ Viewer.setDefaults({
   transition: true,
   fullscreen: true,
   keyboard: true,
-  url: 'data-source'
 })
 /* eslint-disable no-new */
 new Vue({

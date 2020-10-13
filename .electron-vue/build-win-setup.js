@@ -19,7 +19,7 @@ var setupOptions = {
   iconPath: resolve('./.electron-vue/icons/icon.ico'),
   appPublisher: '梁乐',
   appURL: 'https://zzdmt.cn',
-  setupID: '',
+  setupID: '{{C52136C7-4BC8-4880-B719-8B6BE8BF82FC}',
   outputPath: resolve("./build"),
   outputFileName: function () {
     return tmpJson.description + '-' + tmpJson.version

@@ -7,17 +7,7 @@
 </template>
 
 <script>
-var fs = require('fs')
-var extnames = [
-  '.jpg',
-  '.JPG',
-  '.png',
-  '.PNG',
-  '.bmp',
-  '.BMP',
-  '.jpeg',
-  '.JPEG'
-]
+
 export default {
   name: 'index',
   data() {
@@ -25,38 +15,20 @@ export default {
   },
   methods: {
     go_list() {
+      let audio = document.createElement('audio')
+      audio.src = 'static/click.wav'
+      audio.play()
       this.$router.push({ name: 'list' })
     },
     go_search() {
+      let audio = document.createElement('audio')
+      audio.src = 'static/click.wav'
+      audio.play()
       this.$router.push({ name: 'search' })
     }
   },
   mounted() {
-    var Data = {}
-    var path = require('path')
-    // var root = path.dirname(process.execPath) + '\\Data\\'
-    var root =
-      path
-        .dirname(process.execPath)
-        .split('\\')
-        .join('/') + '/Data/'
-    if (fs.existsSync(root)) {
-      fs.readdirSync(root).forEach(function(mulu) {
-        if (fs.statSync(root + mulu).isDirectory()) {
-          var Lst = []
-          fs.readdirSync(root + mulu).forEach(function(wenjian) {
-            if (
-              fs.statSync(root + mulu + '/' + wenjian).isFile() &&
-              extnames.indexOf(path.extname(wenjian)) >= 0
-            ) {
-              Lst.push({ name: wenjian, src: root + mulu + '/' + wenjian })
-            }
-          })
-          Data[mulu] = Lst
-        }
-      })
-    }
-    console.log(Data)
+    
   }
 }
 </script>
@@ -68,7 +40,7 @@ export default {
 }
 .title {
   font-family: 'siyuan';
-  font-size: 110px;
+  font-size: 96px;
   position: absolute;
   color: #716955;
   left: 50%;
